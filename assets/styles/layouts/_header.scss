@@ -1,6 +1,8 @@
 header {
     background-image: url(../images/Header_BG.png);
+    z-index: 99;
     .top_header {
+        font-weight: 500;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -11,53 +13,29 @@ header {
             flex-direction: row;
             flex-wrap: wrap;
             column-gap: 50px;
+            align-items: center;
             a {
                 &:hover {
                     color: $main-color;
                 }
             }
             .btn_nav {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 background-color: $main-color;
                 padding: 10px;
                 color: $white;
                 border-radius: 5px;
                 transition: box-shadow .3s;
                 &:hover {
-                    color: $white;
-                    box-shadow: 0 0 20px rgba(33, 33, 33, .2);
+                    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+                    transition: all .3s ease-in-out;
                 }
             }
         }
         img {
-            height: 20px;
             width: 250px;
-        }
-    }
-    .navbar {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        div {
-            padding: 0 10px;
-            &:after {
-                content: '';
-                display: block;
-                width: 0;
-                height: 1px;
-                background: $main-color;
-                transition: width .3s;
-            }
-            &:hover {
-                color: $main-color;
-                transition: color 0.3s ease-in-out;
-                &::after {
-                    width: 100%;
-                }
-            }
-            span {
-                padding: 0 20px;
-            }
         }
     }
 }

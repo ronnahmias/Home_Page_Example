@@ -29,11 +29,59 @@ html {
 
 .site_wrapper {
     @include hp-warp;
+    margin-top: 5px;
 }
 
 .wrapper {
     width: 70%;
     margin: 0 auto;
+}
+
+.nav-wrapper {
+    height: 21px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 4px 4px rgba(33, 33, 33, .2);
+    background-image: url(../images/Header_BG.png);
+    color: #9A9B9B;
+    div {
+        padding: 0 10px;
+        &:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: $main-color;
+            transition: width .3s;
+        }
+        &:hover {
+            color: $main-color;
+            transition: color 0.3s ease-in-out;
+            &::after {
+                width: 100%;
+            }
+        }
+        span {
+            padding: 0 20px;
+        }
+    }
+    &.sticky {
+        padding: 10px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        transform: translate(0, -200px);
+        z-index: 999;
+    }
+    &.stickyin {
+        transform: translate(0, 0);
+        transition: all .5s ease-in-out;
+    }
 }
 
 .sec_1 {
@@ -42,6 +90,7 @@ html {
     text-align: center;
     padding-top: 80px;
     padding-bottom: 40px;
+    box-shadow: 0 4px 4px rgba(33, 33, 33, .2);
     h1 {
         font-size: 50px;
         font-weight: bold;
@@ -92,6 +141,10 @@ html {
         }
     }
     .table_container {
+        background-image: url(../images/tableBG.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 450px 340px;
         margin-bottom: 55px;
         display: flex;
         flex-direction: row;
@@ -100,6 +153,7 @@ html {
             background-color: #EBEAF0;
             border-bottom-right-radius: 7px;
             border-top-right-radius: 7px;
+            z-index: -1;
         }
         .col {
             display: flex;
@@ -107,9 +161,10 @@ html {
             flex-wrap: wrap;
             width: 33.33%;
             img {
-                width: 28px;
+                width: 17px;
             }
             &:nth-child(2) {
+                background-color: rgba(255, 255, 255, 0.5);
                 box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                 border-bottom-left-radius: 7px;
                 border-top-left-radius: 7px;
@@ -173,6 +228,10 @@ html {
                 color: $main-color;
                 font-weight: 700;
                 border-radius: 3px;
+                &:hover {
+                    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+                    transition: all .3s ease-in-out;
+                }
             }
         }
     }
@@ -206,6 +265,10 @@ html {
                 background-color: $main-color;
                 color: $white;
                 border-radius: 3px;
+                &.btn_sec:hover {
+                    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+                    transition: all .3s ease-in-out;
+                }
             }
         }
         .right {
