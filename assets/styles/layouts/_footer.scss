@@ -1,0 +1,48 @@
+footer {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    .links {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 12%;
+        margin: 0 auto;
+        h4 {
+            color: $main-color;
+            margin-bottom: 15px;
+        }
+        a {
+            margin-bottom: 15px;
+            &:hover {
+                color: $main-color;
+                transition: color .3s;
+            }
+        }
+        img {
+            width: 100px;
+            margin: 0 auto;
+        }
+        .social {
+            margin-bottom: 25px;
+            .icons {
+                display: flex;
+                flex-direction: row;
+                column-gap: 7px;
+                img {
+                    width: 25px;
+                }
+            }
+        }
+        .link_group {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+    }
+}

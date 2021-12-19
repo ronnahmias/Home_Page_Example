@@ -1,0 +1,75 @@
+@mixin flex($justify-content: null, $align-items: null, $direction: null) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $direction;
+}
+
+@mixin flex-center($dir: null) {
+    @include flex(center, center, $dir);
+}
+
+@mixin absolute($args...) {
+    @include position(absolute, $args...);
+}
+
+@mixin text-align-center() {
+    text-align: center;
+}
+
+@mixin image-cover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin main-title-center {
+    @include flex-center;
+    margin-bottom: 20px;
+}
+
+@mixin position-relative {
+    position: relative;
+}
+
+@mixin position( $position, $top: null, $right: null, $bottom: null, $left: null, $index: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: $index;
+}
+
+@mixin page-header($f-size: 2.2rem) {
+    text-transform: uppercase;
+    font-size: $f-size;
+    margin: 50px 0;
+    @media #{$break1} {
+        font-size: 1.3rem;
+    }
+    h1 {
+        font-weight: 400;
+    }
+}
+
+@mixin box-square($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin box-center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin hp-warp {
+    // max-width: 1200px;
+    // width: 95%;
+    @include box-center();
+}
+
+@mixin font-awesome {
+    font-family: "Font Awesome 5 Free" !important;
+    font-weight: bold;
+}
