@@ -37,6 +37,27 @@ html {
     margin: 0 auto;
 }
 
+.chat {
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: sticky;
+        bottom: 15px;
+        left: 15px;
+        width: fit-content;
+        padding: 10px;
+        background-color: $main-color;
+        border-radius: 50%;
+        img {
+            width: 40px;
+        }
+        &:hover {
+            box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+        }
+    }
+}
+
 .nav-wrapper {
     height: 21px;
 }
