@@ -2,7 +2,7 @@
 
 **[Demo](https://githubbox.com/ronnahmias/Home_Page_Example)**
 
-## Overview
+## Overview:
 - This project was to implement pdf design into web page.
 - Using css3 animations.
 - using gulp.js for minify css and js files.
